@@ -1,7 +1,7 @@
 import { renderDashboard } from "./dashboard.js";
 
 export function renderLogin(root) {
-    root.innerHTML = `
+  root.innerHTML = `
     <h1>Login</h1>
     <form id="login-form">
       <label>Email</label>
@@ -14,8 +14,8 @@ export function renderLogin(root) {
     </form>
   `;
 
-    document.getElementById("login-form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        renderDashboard(root);
-    });
+  document.getElementById("login-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    renderDashboard(root);
+  });
 }

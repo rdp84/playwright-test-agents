@@ -1,0 +1,23 @@
+{
+    "name": "pw-framework",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "author": "Bobby Pearson",
+    "devDependencies": {
+        "@biomejs/biome": "2.4.16",
+        "@playwright/test": "^1.60.0",
+        "@tsconfig/recommended": "^1.0.13",
+        "@types/node": "^25.9.1",
+        "dotenv": "^17.4.2",
+        "typescript": "^6.0.3"
+    },
+    "scripts": {
+        "check-types": "yarn tsc -p tsconfig.json",
+        "lint": "biome check .",
+        "lint:fix": "biome check --write .",
+        "test": "yarn playwright test"
+    },
+    "engines": {
+        "node": "24.14.1"
+    }
+}

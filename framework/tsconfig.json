@@ -1,0 +1,11 @@
+{
+    "extends": "@tsconfig/recommended/tsconfig.json",
+    "compilerOptions": {
+        "paths": {
+            "@fixtures/*": ["./fixtures/*"],
+            "@model/*": ["./model/*"]
+        },
+        "types": ["node"],
+        "noEmit": true
+    }
+}

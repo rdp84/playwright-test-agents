@@ -1,0 +1,28 @@
+import { defineConfig, devices } from "@playwright/test";
+import dotenv from "dotenv";
+
+dotenv.config({ quiet: true });
+
+export default defineConfig({
+    testDir: "./tests",
+    testIgnore: ["tests/example.spec.ts"],
+    fullyParallel: true,
+    forbidOnly: !!process.env.CI,
+    retries: 0,
+    reporter: [["html", { open: "never" }], ["list"]],
+    use: {
+        baseURL: process.env.APP_URL || "https://localhost:5173",
+        trace: "retain-on-failure",
+        screenshot: {
+            mode: "only-on-failure",
+            fullPage: true,
+        },
+    },
+
+    projects: [
+        {
+            name: "desktop-chromium",
+            use: { ...devices["Desktop Chrome"] },
+        },
+    ],
+});

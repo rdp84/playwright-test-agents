@@ -6,7 +6,7 @@ export class Email {
 
     constructor(page: Page) {
         this.validEmail = process.env.EMAIL || "";
-        this.input = page.locator("#email");
+        this.input = page.getByTestId("email");
     }
 
     getValidEmail(): string {

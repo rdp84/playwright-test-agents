@@ -3,9 +3,9 @@ export function showModal(message) {
     modal.className = "modal";
 
     modal.innerHTML = `
-    <div class="modal-content">
+    <div class="modal-content" data-test-id="modal-content">
       <p>${message}</p>
-      <button id="close-modal">Close</button>
+      <button id="close-modal" data-test-id="close-modal">Close</button>
     </div>
   `;
 

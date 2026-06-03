@@ -6,10 +6,10 @@ export class Password {
 
     constructor(page: Page) {
         this.validPassword = process.env.PASSWORD || "";
-        this.input = page.locator("#password");
+        this.input = page.getByTestId("password");
     }
 
-    getValidEmail(): string {
+    getValidPassword(): string {
         return this.validPassword;
     }
 

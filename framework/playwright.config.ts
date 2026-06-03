@@ -17,6 +17,7 @@ export default defineConfig({
             mode: "only-on-failure",
             fullPage: true,
         },
+        testIdAttribute: "data-test-id",
     },
 
     projects: [

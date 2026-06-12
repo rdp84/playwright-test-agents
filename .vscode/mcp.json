@@ -1,13 +1,14 @@
 {
-  "servers": {
+  "mcpServers": {
     "playwright-test": {
       "type": "stdio",
       "command": "npx",
       "args": [
+        "--workspace=framework",
         "playwright",
         "run-test-mcp-server"
-      ]
+      ],
+      "tools": ["*"]
     }
-  },
-  "inputs": []
+  }
 }

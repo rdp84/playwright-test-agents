@@ -1,0 +1,12 @@
+{
+  "name": "pw-test-agents",
+  "version": "1.0.0",
+  "description": "A project to learn about a Playwright test agents",
+  "author": "Bobby Pearson",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": [
+    "app",
+    "framework"
+  ]
+}

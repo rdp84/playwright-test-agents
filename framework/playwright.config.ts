@@ -10,13 +10,14 @@ dotenv.config({
 
 export default defineConfig({
 	testDir: "./tests",
-	testIgnore: ["tests/example.spec.ts"],
+	testMatch: "**/*.spec.ts",
+	testIgnore: ["tests/seed.spec.ts"],
 	fullyParallel: true,
 	forbidOnly: !!process.env.CI,
 	retries: 0,
 	reporter: [["html", { open: "never" }], ["list"]],
 	use: {
-		baseURL: process.env.APP_URL || "https://localhost:5173",
+		baseURL: process.env.APP_URL || "http://localhost:5173",
 		trace: "retain-on-failure",
 		screenshot: {
 			mode: "only-on-failure",

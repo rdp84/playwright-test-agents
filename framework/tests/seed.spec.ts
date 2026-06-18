@@ -1,7 +1,8 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from "@fixtures/fixtures";
 
-test.describe('Test group', () => {
-  test('seed', async ({ page }) => {
-    // generate code here.
-  });
+test.describe("Login page", () => {
+	test("user can successfully land on login page", async ({ loginPage }) => {
+		await expect(loginPage.page).toHaveTitle("Test App");
+		await expect(loginPage.heading).toHaveText("Login");
+	});
 });
